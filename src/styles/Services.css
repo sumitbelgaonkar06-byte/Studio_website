@@ -1,0 +1,243 @@
+/* STUDIO 711 — Services Page Styles */
+
+.services-intro-bar {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg-card);
+}
+
+.services-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.services-intro-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-intro-num {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.services-intro-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* Alternating Services Layout */
+.services-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5rem, 9vw, 8.5rem);
+  padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+}
+
+.service-item-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+/* Alternating reverse */
+.service-item-row.reverse {
+  direction: rtl;
+}
+
+.service-item-row.reverse > * {
+  direction: ltr;
+}
+
+/* Service Content Column */
+.service-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-step-index {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.service-item-title {
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.service-item-short {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.service-item-body {
+  font-size: 1.02rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.service-deliverables-box {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 1.75rem 2rem;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.service-deliverables-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.service-deliverables-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.service-deliverable-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--color-accent);
+  width: 16px;
+  height: 16px;
+}
+
+/* Service Media Column */
+.service-media-col {
+  position: relative;
+}
+
+.service-media-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  aspect-ratio: 16 / 11;
+  background-color: #E2D8D5;
+  box-shadow: var(--shadow-md);
+}
+
+.service-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-media-frame:hover .service-media-img {
+  transform: scale(1.04);
+}
+
+/* Process Section */
+.process-section {
+  background-color: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: clamp(5rem, 8vw, 8rem) 0;
+}
+
+.process-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(3.5rem, 6vw, 5rem);
+}
+
+.process-timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.process-step-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.process-step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.process-step-num {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.process-step-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.process-step-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .process-timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .service-item-row,
+  .service-item-row.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  .service-item-row.reverse > * {
+    direction: ltr;
+  }
+  .services-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .process-timeline-grid {
+    grid-template-columns: 1fr;
+  }
+}

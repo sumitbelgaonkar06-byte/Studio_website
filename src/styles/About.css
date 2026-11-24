@@ -1,0 +1,264 @@
+/* STUDIO 711 — About Page Styles */
+
+/* Studio Intro & Editorial Story */
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.about-intro-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.25;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-quote::before {
+  content: '“';
+  font-family: var(--font-serif);
+  position: absolute;
+  top: -1.5rem;
+  left: -1rem;
+  font-size: 5rem;
+  color: var(--color-border);
+  line-height: 1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about-lead-para {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-secondary-para {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.about-intro-media {
+  position: relative;
+}
+
+.about-hero-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.about-media-caption {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 0.85rem;
+  display: block;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+}
+
+.philosophy-header {
+  max-width: 780px;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.philosophy-title {
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  margin-bottom: 1.25rem;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 3vw, 3rem);
+}
+
+.philosophy-card {
+  padding: 2.25rem 2rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.philosophy-number {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.philosophy-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+  color: var(--color-text-primary);
+}
+
+.philosophy-card-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+/* TEAM SECTION (Strict Requirements) */
+.team-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+}
+
+.team-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.team-title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.team-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+/* 3 members per row on desktop, 2 on tablet, 1-2 on mobile */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2.5rem, 4vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-radius: 4px;
+  transition: transform var(--transition-smooth);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Circular profile photographs */
+.team-avatar-wrapper {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-smooth);
+}
+
+.team-card:hover .team-avatar-wrapper {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 24px rgba(184, 93, 67, 0.18);
+  transform: scale(1.03);
+}
+
+.team-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Names in elegant serif typography */
+.team-name {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+/* Designations in small uppercase terracotta text */
+.team-role {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-accent);
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+}
+
+.team-bio {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Responsive Queries for Team & About */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+  }
+  .philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-hero-image {
+    max-height: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-avatar-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
